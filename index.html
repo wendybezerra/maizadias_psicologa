@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maíza Dias - Psicóloga Clínica</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { box-sizing: border-box; }
+
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    .font-serif { font-family: 'Cormorant Garamond', serif; }
+    .font-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+    .smooth-scroll { scroll-behavior: smooth; }
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hover-scale { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    .hover-scale:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .divider-line { width: 60px; height: 2px; margin: 0 auto; }
+
+    .btn-primary { transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    .btn-primary:hover::before { width: 300px; height: 300px; }
+
+    .glass-effect {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+    }
+  </style>
+
+  <style>@view-transition { navigation: auto; }</style>
+</head>
+
+<body class="h-full smooth-scroll font-sans">
+  <div id="app-wrapper" class="w-full h-full overflow-auto">
+
+    <!-- Header -->
+    <header id="header" class="w-full py-4 px-6 fixed top-0 left-0 z-50 glass-effect shadow-sm">
+      <nav class="max-w-7xl mx-auto flex justify-between items-center">
+        <div>
+          <h1 id="header-name" class="font-serif font-bold tracking-wide text-2xl">Maíza Dias</h1>
+          <p id="header-credentials" class="text-xs mt-0.5 opacity-80">🧠 Psicóloga Clínica - CRP: 06/134986</p>
+          <p id="header-specialties" class="text-xs mt-0.5 opacity-75">📚 Foco: TDAH, Transtorno Bipolar e Ansiedade | Especialista em TCC</p>
+        </div>
+
+        <a href="#contact" class="hidden md:block">
+          <button id="header-cta" class="btn-primary px-6 py-2.5 rounded-full font-medium text-sm">
+            Agendar Consulta
+          </button>
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="w-full min-h-screen flex items-center justify-center px-6 pt-32 pb-20">
+      <div class="max-w-5xl mx-auto text-center fade-in">
+        <div class="mb-8 flex justify-center">
+          <img
+            src="https://scontent-for2-1.cdninstagram.com/v/t51.2885-19/544857000_8_097_n.jpg"
+            alt="Maíza Dias"
+            class="w-48 h-48 rounded-full object-cover shadow-2xl border-4"
+            onerror="this.style.display='none';"
+            style="border-color: #d4b5d4;"
+          >
+        </div>
+
+        <h2 id="hero-title" class="font-serif font-bold mb-4 leading-tight">Excelência no cuidado em saúde mental</h2>
+        <div id="divider" class="divider-line my-6 mx-auto"></div>
+        <p id="hero-subtitle" class="mb-10 max-w-3xl mx-auto leading-relaxed">
+          Acompanhamento clínico ético, individualizado e baseado nas melhores evidências científicas
+        </p>
+
+        <a href="#contact">
+          <button id="hero-cta" class="btn-primary px-10 py-4 rounded-full font-semibold shadow-lg">
+            Agendar Consulta
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="w-full py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <h3 id="about-title" class="font-serif font-bold mb-4">Sobre</h3>
+            <div id="about-divider" class="divider-line my-6" style="margin-left: 0;"></div>
+
+            <p id="about-description" class="leading-relaxed mb-6">
+              Sou Maíza Dias, psicóloga clínica. Especialista em Terapia Cognitivo-Comportamental, Psicopatologia e Psicologia da Saúde, com formação em obesidade e emagrecimento.
+            </p>
+
+            <p id="about-description-2" class="leading-relaxed mb-6">
+              Atuo com vasta experiência no tratamento dos transtornos de ansiedade, TDAH, transtornos depressivos e transtorno bipolar, oferecendo um acompanhamento clínico ético, individualizado e baseado nas melhores evidências científicas.
+            </p>
+
+            <p id="about-description-3" class="leading-relaxed">
+              Meu trabalho é direcionado a pessoas que buscam excelência no cuidado em saúde mental, com discrição, profundidade e compromisso com resultados consistentes e sustentáveis, voltado a pessoas que desejam consolidar estabilidade emocional e desempenho consistente na vida pessoal e profissional.
+            </p>
+          </div>
+
+          <div class="order-1 md:order-2 flex justify-center">
+            <img
+              src="https://scontent-for2-1.cdninstagram.com/v/t51.2885-19/544857000_8_097_n.jpg"
+              alt="Maíza Dias"
+              class="w-80 h-80 rounded-2xl object-cover shadow-2xl"
+              onerror="this.style.display='none';"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="w-full py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h3 id="services-title" class="font-serif font-bold text-center mb-4">Áreas de Atuação</h3>
+        <div id="services-divider" class="divider-line my-6"></div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+          <div class="rounded-2xl p-8 hover-scale text-center">
+            <div class="mb-6 flex justify-center">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl">🧘‍♀️</div>
+            </div>
+            <h4 id="service-1-title" class="font-serif font-semibold mb-3">Transtornos de Ansiedade</h4>
+            <p id="service-1-description" class="text-sm leading-relaxed">
+              Tratamento especializado para diferentes manifestações de ansiedade, com técnicas baseadas em evidências científicas.
+            </p>
+          </div>
+
+          <div class="rounded-2xl p-8 hover-scale text-center">
+            <div class="mb-6 flex justify-center">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl">🎯</div>
+            </div>
+            <h4 id="service-2-title" class="font-serif font-semibold mb-3">TDAH</h4>
+            <p id="service-2-description" class="text-sm leading-relaxed">
+              Acompanhamento clínico focado em estratégias para melhorar concentração, organização e desempenho.
+            </p>
+          </div>
+
+          <div class="rounded-2xl p-8 hover-scale text-center">
+            <div class="mb-6 flex justify-center">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl">💚</div>
+            </div>
+            <h4 id="service-3-title" class="font-serif font-semibold mb-3">Transtornos de Humor</h4>
+            <p id="service-3-description" class="text-sm leading-relaxed">
+              Tratamento especializado para transtornos depressivos e bipolar, visando estabilidade emocional e qualidade de vida.
+            </p>
+          </div>
+
+          <div class="rounded-2xl p-8 hover-scale text-center">
+            <div class="mb-6 flex justify-center">
+              <div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl">🌱</div>
+            </div>
+            <h4 id="service-4-title" class="font-serif font-semibold mb-3">Obesidade e Emagrecimento</h4>
+            <p id="service-4-description" class="text-sm leading-relaxed">
+              Suporte psicológico especializado para processos de mudança de comportamento alimentar e estilo de vida.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="w-full py-24 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="rounded-3xl p-12 md:p-16 text-center shadow-xl">
+          <h3 id="contact-title" class="font-serif font-bold mb-4">Agende sua Consulta</h3>
+          <div id="contact-divider" class="divider-line my-6"></div>
+
+          <p id="contact-description" class="mb-10 max-w-2xl mx-auto leading-relaxed">
+            Entre em contato para mais informações ou para agendar uma consulta. Atendimento com discrição e compromisso.
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-4">
+            <!-- WhatsApp corrigido -->
+            <a
+              href="https://wa.me/5517997785063?text=Ol%C3%A1%20Maiza%20Dias%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Podemos%20conversar%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="whatsapp-button"
+              class="px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-xl inline-flex items-center gap-3"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382C17.015 14.154 14.775 13.055 14.368 12.903C13.962 12.75 13.668 12.674 13.373 13.131C13.079 13.588 12.215 14.612 11.947 14.906C11.678 15.201 11.41 15.238 10.953 15.01C10.496 14.782 8.988 14.282 7.203 12.689C5.808 11.448 4.895 9.916 4.627 9.459C4.358 9.002 4.595 8.755 4.823 8.527C5.027 8.323 5.28 8.001 5.508 7.732C5.736 7.463 5.812 7.27 5.965 6.976C6.118 6.681 6.042 6.413 5.928 6.185C5.812 5.957 4.902 3.714 4.534 2.8C4.174 1.913 3.806 2.023 3.537 2.01C3.267 1.997 2.973 1.997 2.679 1.997C2.384 1.997 1.927 2.111 1.52 2.568C1.114 3.025 0 4.124 0 6.367C0 8.61 1.595 10.779 1.823 11.073C2.051 11.368 4.895 15.558 9.145 17.539C10.061 17.941 10.779 18.179 11.341 18.356C12.26 18.654 13.098 18.612 13.764 18.496C14.504 18.367 16.327 17.577 16.695 16.692C17.062 15.807 17.062 15.046 16.948 14.869C16.833 14.693 16.539 14.579 16.082 14.351M12.001 21.79H11.997C10.186 21.789 8.411 21.286 6.869 20.337L6.504 20.117L2.82 21.123L3.839 17.527L3.596 17.148C2.555 15.545 2.003 13.681 2.004 11.768C2.006 6.376 6.374 2.007 11.769 2.007C14.386 2.008 16.847 3.028 18.703 4.888C20.559 6.748 21.575 9.212 21.574 11.832C21.572 17.225 17.204 21.594 12.001 21.79ZM20.385 3.685C18.17 1.465 15.256 0.214 12.002 0.213C5.917 0.213 0.959 5.17 0.957 11.256C0.956 13.301 1.505 15.296 2.548 17.047L0.85 23.15L7.079 21.482C8.767 22.428 10.666 22.928 12.598 22.929H12.602C18.686 22.929 23.644 17.971 23.646 11.885C23.647 8.631 22.399 5.715 20.385 3.685Z"
+                  fill="currentColor" />
+              </svg>
+              WhatsApp
+            </a>
+
+            <a
+              href="https://www.instagram.com/maizadiaspsi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="instagram-button"
+              class="px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-xl inline-flex items-center gap-3"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"
+                  fill="currentColor" />
+              </svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="w-full py-8 px-6 text-center border-t">
+      <p id="footer-text" class="text-sm opacity-75">© 2024 Maíza Dias - Psicóloga Clínica</p>
+    </footer>
+
+  </div>
+
+  <script>
+    const defaultConfig = {
+      background_color: '#faf8f5',
+      surface_color: '#f5ebe0',
+      text_color: '#2d2d2d',
+      primary_action_color: '#c4a4d4',
+      secondary_action_color: '#d4b5d4',
+      font_family: 'Inter',
+      font_size: 16,
+      psychologist_name: 'Maíza Dias',
+      credentials: '🧠 Psicóloga Clínica - CRP: 06/134986',
+      specialties: '📚 Foco: TDAH, Transtorno Bipolar e Ansiedade | Especialista em TCC',
+      hero_title: 'Excelência no cuidado em saúde mental',
+      hero_subtitle: 'Acompanhamento clínico ético, individualizado e baseado nas melhores evidências científicas',
+      cta_button: 'Agendar Consulta',
+      about_title: 'Sobre',
+      services_title: 'Áreas de Atuação',
+      service_1_title: 'Transtornos de Ansiedade',
+      service_1_description: 'Tratamento especializado para diferentes manifestações de ansiedade, com técnicas baseadas em evidências científicas.',
+      service_2_title: 'TDAH',
+      service_2_description: 'Acompanhamento clínico focado em estratégias para melhorar concentração, organização e desempenho.',
+      service_3_title: 'Transtornos de Humor',
+      service_3_description: 'Tratamento especializado para transtornos depressivos e bipolar, visando estabilidade emocional e qualidade de vida.',
+      service_4_title: 'Obesidade e Emagrecimento',
+      service_4_description: 'Suporte psicológico especializado para processos de mudança de comportamento alimentar e estilo de vida.',
+      contact_title: 'Agende sua Consulta',
+      contact_description: 'Entre em contato para mais informações ou para agendar uma consulta. Atendimento com discrição e compromisso.',
+      footer_text: '© 2024 Maíza Dias - Psicóloga Clínica'
+    };
+
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseFontStack = '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      const fontFamily = `${customFont}, ${baseFontStack}`;
+
+      const baseSize = config.font_size || defaultConfig.font_size;
+
+      const backgroundColor = config.background_color || defaultConfig.background_color;
+      const surfaceColor = config.surface_color || defaultConfig.surface_color;
+      const textColor = config.text_color || defaultConfig.text_color;
+      const primaryActionColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const secondaryActionColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+
+      document.getElementById('app-wrapper').style.backgroundColor = backgroundColor;
+      document.getElementById('app-wrapper').style.color = textColor;
+      document.getElementById('app-wrapper').style.fontFamily = fontFamily;
+
+      const header = document.getElementById('header');
+      header.style.color = textColor;
+
+      const headerName = document.getElementById('header-name');
+      headerName.textContent = config.psychologist_name || defaultConfig.psychologist_name;
+      headerName.style.fontSize = `${baseSize * 1.5}px`;
+      headerName.style.color = textColor;
+
+      const headerCredentials = document.getElementById('header-credentials');
+      headerCredentials.textContent = config.credentials || defaultConfig.credentials;
+      headerCredentials.style.fontSize = `${baseSize * 0.75}px`;
+      headerCredentials.style.color = textColor;
+
+      const headerSpecialties = document.getElementById('header-specialties');
+      headerSpecialties.textContent = config.specialties || defaultConfig.specialties;
+      headerSpecialties.style.fontSize = `${baseSize * 0.75}px`;
+      headerSpecialties.style.color = textColor;
+
+      const headerCta = document.getElementById('header-cta');
+      headerCta.textContent = config.cta_button || defaultConfig.cta_button;
+      headerCta.style.backgroundColor = primaryActionColor;
+      headerCta.style.color = '#ffffff';
+      headerCta.style.fontSize = `${baseSize * 0.875}px`;
+
+      const heroTitle = document.getElementById('hero-title');
+      heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
+      heroTitle.style.fontSize = `${baseSize * 3}px`;
+      heroTitle.style.color = textColor;
+
+      const divider = document.getElementById('divider');
+      divider.style.backgroundColor = primaryActionColor;
+
+      const heroSubtitle = document.getElementById('hero-subtitle');
+      heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      heroSubtitle.style.fontSize = `${baseSize * 1.25}px`;
+      heroSubtitle.style.color = textColor;
+
+      const heroCta = document.getElementById('hero-cta');
+      heroCta.textContent = config.cta_button || defaultConfig.cta_button;
+      heroCta.style.backgroundColor = primaryActionColor;
+      heroCta.style.color = '#ffffff';
+      heroCta.style.fontSize = `${baseSize * 1.125}px`;
+
+      const aboutTitle = document.getElementById('about-title');
+      aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+      aboutTitle.style.fontSize = `${baseSize * 2.5}px`;
+      aboutTitle.style.color = textColor;
+
+      const aboutDivider = document.getElementById('about-divider');
+      aboutDivider.style.backgroundColor = primaryActionColor;
+
+      const aboutDescription = document.getElementById('about-description');
+      aboutDescription.style.fontSize = `${baseSize * 1.125}px`;
+      aboutDescription.style.color = textColor;
+
+      const aboutDescription2 = document.getElementById('about-description-2');
+      aboutDescription2.style.fontSize = `${baseSize * 1.125}px`;
+      aboutDescription2.style.color = textColor;
+
+      const aboutDescription3 = document.getElementById('about-description-3');
+      aboutDescription3.style.fontSize = `${baseSize * 1.125}px`;
+      aboutDescription3.style.color = textColor;
+
+      const servicesTitle = document.getElementById('services-title');
+      servicesTitle.textContent = config.services_title || defaultConfig.services_title;
+      servicesTitle.style.fontSize = `${baseSize * 2.5}px`;
+      servicesTitle.style.color = textColor;
+
+      const servicesDivider = document.getElementById('services-divider');
+      servicesDivider.style.backgroundColor = primaryActionColor;
+
+      const serviceCards = document.querySelectorAll('#services .hover-scale');
+      serviceCards.forEach(card => { card.style.backgroundColor = surfaceColor; });
+
+      const service1Title = document.getElementById('service-1-title');
+      service1Title.textContent = config.service_1_title || defaultConfig.service_1_title;
+      service1Title.style.fontSize = `${baseSize * 1.125}px`;
+      service1Title.style.color = textColor;
+
+      const service1Description = document.getElementById('service-1-description');
+      service1Description.textContent = config.service_1_description || defaultConfig.service_1_description;
+      service1Description.style.fontSize = `${baseSize * 0.875}px`;
+      service1Description.style.color = textColor;
+
+      const service2Title = document.getElementById('service-2-title');
+      service2Title.textContent = config.service_2_title || defaultConfig.service_2_title;
+      service2Title.style.fontSize = `${baseSize * 1.125}px`;
+      service2Title.style.color = textColor;
+
+      const service2Description = document.getElementById('service-2-description');
+      service2Description.textContent = config.service_2_description || defaultConfig.service_2_description;
+      service2Description.style.fontSize = `${baseSize * 0.875}px`;
+      service2Description.style.color = textColor;
+
+      const service3Title = document.getElementById('service-3-title');
+      service3Title.textContent = config.service_3_title || defaultConfig.service_3_title;
+      service3Title.style.fontSize = `${baseSize * 1.125}px`;
+      service3Title.style.color = textColor;
+
+      const service3Description = document.getElementById('service-3-description');
+      service3Description.textContent = config.service_3_description || defaultConfig.service_3_description;
+      service3Description.style.fontSize = `${baseSize * 0.875}px`;
+      service3Description.style.color = textColor;
+
+      const service4Title = document.getElementById('service-4-title');
+      service4Title.textContent = config.service_4_title || defaultConfig.service_4_title;
+      service4Title.style.fontSize = `${baseSize * 1.125}px`;
+      service4Title.style.color = textColor;
+
+      const service4Description = document.getElementById('service-4-description');
+      service4Description.textContent = config.service_4_description || defaultConfig.service_4_description;
+      service4Description.style.fontSize = `${baseSize * 0.875}px`;
+      service4Description.style.color = textColor;
+
+      const contactSection = document.querySelector('#contact > div > div');
+      contactSection.style.backgroundColor = surfaceColor;
+
+      const contactTitle = document.getElementById('contact-title');
+      contactTitle.textContent = config.contact_title || defaultConfig.contact_title;
+      contactTitle.style.fontSize = `${baseSize * 2.5}px`;
+      contactTitle.style.color = textColor;
+
+      const contactDivider = document.getElementById('contact-divider');
+      contactDivider.style.backgroundColor = primaryActionColor;
+
+      const contactDescription = document.getElementById('contact-description');
+      contactDescription.textContent = config.contact_description || defaultConfig.contact_description;
+      contactDescription.style.fontSize = `${baseSize * 1.125}px`;
+      contactDescription.style.color = textColor;
+
+      const whatsappButton = document.getElementById('whatsapp-button');
+      whatsappButton.style.backgroundColor = primaryActionColor;
+      whatsappButton.style.color = '#ffffff';
+      whatsappButton.style.fontSize = `${baseSize}px`;
+
+      const instagramButton = document.getElementById('instagram-button');
+      instagramButton.style.backgroundColor = secondaryActionColor;
+      instagramButton.style.color = '#ffffff';
+      instagramButton.style.fontSize = `${baseSize}px`;
+
+      const footer = document.getElementById('footer');
+      footer.style.borderTopColor = surfaceColor;
+      footer.style.color = textColor;
+
+      const footerText = document.getElementById('footer-text');
+      footerText.textContent = config.footer_text || defaultConfig.footer_text;
+      footerText.style.fontSize = `${baseSize * 0.875}px`;
+      footerText.style.color = textColor;
+    }
+
+    // Mantém a página funcionando mesmo sem o SDK (GitHub Pages)
+    // Se no futuro você tiver esse SDK, pode reativar aqui.
+  </script>
+</body>
+</html>
+
