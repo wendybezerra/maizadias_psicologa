@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maíza Dias | Psicóloga Clínica</title>
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="imag/logo.png">
-  <link rel="apple-touch-icon" href="imag/logo.png">
-
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,12 +17,12 @@
     .font-serif { font-family: "Cormorant Garamond", serif; }
 
     :root{
-      --bg: #F7F3EE;
-      --surface: #FFFFFF;
-      --muted: #6B7280;
-      --ink: #1F2937;
-      --accent: #B79AF7;
-      --accent2:#D8C7FF;
+      --bg: #F7F3EE;         /* bege claro */
+      --surface: #FFFFFF;    /* branco */
+      --muted: #6B7280;      /* cinza */
+      --ink: #1F2937;        /* texto */
+      --accent: #B79AF7;     /* lilás pastel */
+      --accent2:#D8C7FF;     /* lilás bem claro */
     }
   </style>
 </head>
@@ -35,13 +31,11 @@
 
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/5">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="mx-auto max-w-7xl px-6">
       <div class="flex items-center justify-between py-4">
-
-        <!-- LOGO -->
         <div class="flex items-center gap-3">
-          <div class="h-12 w-12 overflow-hidden rounded-full ring-2 ring-[var(--accent2)]">
-            <img src="imag/logo.png" alt="Maíza Dias Logo" class="h-full w-full object-contain p-1">
+          <div class="h-10 w-10 overflow-hidden rounded-full ring-2 ring-[var(--accent2)]">
+            <img src="./maizadias.png?v=20" alt="Maíza Dias" class="h-full w-full object-cover" style="object-position: 50% 28%;">
           </div>
           <div class="leading-tight">
             <p class="font-semibold">Maíza Dias</p>
@@ -49,61 +43,452 @@
           </div>
         </div>
 
-        <!-- CTA -->
+        <nav class="hidden md:flex items-center gap-6 text-sm text-black/70">
+          <a class="hover:text-black" href="#inicio">Início</a>
+          <a class="hover:text-black" href="#sobre">Sobre</a>
+          <a class="hover:text-black" href="#atuacao">Serviços</a>
+          <a class="hover:text-black" href="#beneficios">Benefícios</a>
+          <a class="hover:text-black" href="#faq">FAQ</a>
+          <a class="hover:text-black" href="#contato">Contato</a>
+        </nav>
+
         <a
-          href="https://wa.me/5517997785063"
-          class="hidden md:inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-5 py-2 text-sm font-semibold text-white hover:brightness-95 transition"
+          href="https://wa.me/5517997785063?text=Ol%C3%A1%20Maiza%20Dias%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Podemos%20conversar%3F"
+          class="inline-flex items-center justify-center rounded-full bg-[var(--accent)] px-5 py-2 text-sm font-semibold text-white hover:brightness-95 transition"
           target="_blank" rel="noopener"
         >
-          Agendar sessão
+          Agendar Sessão
         </a>
       </div>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="py-20">
-    <div class="mx-auto max-w-6xl px-4 grid gap-10 md:grid-cols-2 items-center">
+  <section id="inicio" class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[var(--accent2)]/60 blur-3xl"></div>
+      <div class="absolute -bottom-28 -right-28 h-80 w-80 rounded-full bg-[#F0E6FF]/70 blur-3xl"></div>
+    </div>
 
+    <div class="mx-auto max-w-7xl px-6 py-14 md:py-20 relative">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm text-black/70 border border-black/5">
+            <span class="h-2 w-2 rounded-full bg-[var(--accent)]"></span>
+            Atendimento online • TCC baseada em evidências
+          </div>
+
+          <h1 class="mt-6 font-serif text-5xl md:text-6xl leading-[1.05]">
+            Cuide da sua <span class="text-[var(--accent)]">saúde mental</span>
+            com acolhimento e estratégia
+          </h1>
+
+          <p class="mt-5 text-black/70 text-base md:text-lg max-w-xl">
+            Psicoterapia com acompanhamento clínico ético, individualizado e focado em resultados consistentes.
+            Atuação em <b>TDAH</b>, <b>Ansiedade</b>, <b>Transtornos Depressivos</b> e <b>Transtorno Bipolar</b>.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a
+              href="https://wa.me/5517997785063?text=Ol%C3%A1%20Maiza%20Dias%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Podemos%20conversar%3F"
+              class="rounded-full bg-[var(--accent)] px-7 py-3 font-semibold text-white hover:brightness-95 transition text-center"
+              target="_blank" rel="noopener"
+            >
+              Agendar Sessão
+            </a>
+            <a
+              href="#sobre"
+              class="rounded-full border border-black/10 bg-white/60 px-7 py-3 font-semibold text-black/80 hover:bg-white transition text-center"
+            >
+              Sobre mim
+            </a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-3 gap-4 max-w-xl">
+            <div class="rounded-2xl bg-white/70 px-4 py-4 border border-black/5">
+              <p class="text-2xl font-semibold">Online</p>
+              <p class="text-xs text-black/60 mt-1">Atendimento remoto</p>
+            </div>
+            <div class="rounded-2xl bg-white/70 px-4 py-4 border border-black/5">
+              <p class="text-2xl font-semibold">TCC</p>
+              <p class="text-xs text-black/60 mt-1">Especialista</p>
+            </div>
+            <div class="rounded-2xl bg-white/70 px-4 py-4 border border-black/5">
+              <p class="text-2xl font-semibold">Foco</p>
+              <p class="text-xs text-black/60 mt-1">TDAH • Ansiedade • Humor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-[28px] bg-white/70 p-6 border border-black/5 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="h-16 w-16 overflow-hidden rounded-full ring-2 ring-[var(--accent2)]">
+                <img src="./maizadias.png?v=20" alt="Maíza Dias" class="h-full w-full object-cover" style="object-position: 50% 28%;">
+              </div>
+              <div>
+                <p class="font-semibold">Maíza Dias</p>
+                <p class="text-sm text-black/60">Psicóloga Clínica • CRP 06/134986</p>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-white p-5 border border-black/5">
+              <p class="text-sm font-semibold">Especializações</p>
+              <p class="text-sm text-black/65 mt-1">
+                Terapia Cognitivo-Comportamental (TCC) • Psicopatologia • Psicologia da Saúde •
+                Obesidade e Emagrecimento
+              </p>
+            </div>
+
+            <div class="mt-4 rounded-2xl bg-[#F6F0FF] p-5 border border-black/5">
+              <p class="text-sm font-semibold">Direcionamento clínico</p>
+              <p class="text-sm text-black/65 mt-1">
+                Discrição, profundidade e compromisso com estabilidade emocional e desempenho consistente.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+    <div class="grid gap-10 md:grid-cols-2 items-center">
       <div>
-        <h1 class="font-serif text-[clamp(34px,5vw,64px)] leading-tight">
-          Cuide da sua <span class="text-[var(--accent)]">saúde mental</span>
-          com acolhimento e estratégia
-        </h1>
+        <p class="inline-flex rounded-full bg-white/70 px-4 py-2 text-sm font-medium text-black/70 border border-black/5">Sobre mim</p>
+        <h2 class="mt-5 font-serif text-4xl md:text-5xl leading-tight">Quem é Maíza Dias?</h2>
 
-        <p class="mt-6 text-black/70 text-[clamp(16px,1.6vw,18px)]">
-          Psicoterapia baseada em evidências, com foco em estabilidade emocional e desenvolvimento pessoal.
+        <p class="mt-5 text-black/70 leading-relaxed">
+          Sou <b>Maíza Dias</b>, psicóloga clínica. Especialista em <b>Terapia Cognitivo-Comportamental (TCC)</b>,
+          <b>Psicopatologia</b> e <b>Psicologia da Saúde</b>, com formação em <b>obesidade e emagrecimento</b>.
         </p>
 
-        <a
-          href="https://wa.me/5517997785063"
-          class="mt-8 inline-block rounded-full bg-[var(--accent)] px-8 py-3 font-semibold text-white hover:brightness-95 transition"
-          target="_blank"
-        >
-          Agendar sessão
-        </a>
-      </div>
+        <p class="mt-4 text-black/70 leading-relaxed">
+          Atuo com experiência no tratamento de <b>transtornos de ansiedade</b>, <b>TDAH</b>, <b>transtornos depressivos</b> e
+          <b>transtorno bipolar</b>, oferecendo um acompanhamento ético, individualizado e baseado em evidências.
+        </p>
 
-      <!-- LOGO CARD -->
-      <div class="flex justify-center">
-        <div class="bg-white p-10 rounded-3xl shadow-sm border border-black/5">
-          <img src="imag/logo.png" alt="Maíza Dias Logo" class="w-64 mx-auto object-contain">
+        <div class="mt-8 grid gap-3 sm:grid-cols-2">
+          <div class="rounded-2xl border border-black/5 bg-white/70 p-5">
+            <p class="font-semibold">Abordagem</p>
+            <p class="text-sm text-black/60 mt-1">TCC com estratégias práticas e acompanhamento de evolução.</p>
+          </div>
+          <div class="rounded-2xl border border-black/5 bg-white/70 p-5">
+            <p class="font-semibold">Compromisso</p>
+            <p class="text-sm text-black/60 mt-1">Sigilo, acolhimento e direcionamento com consistência.</p>
+          </div>
         </div>
       </div>
 
+      <div class="relative">
+        <div class="rounded-[28px] bg-white/70 p-6 border border-black/5 shadow-sm">
+          <div class="overflow-hidden rounded-3xl">
+            <img
+              src="./maizadias.png?v=20"
+              alt="Maíza Dias"
+              class="h-[420px] w-full object-cover"
+              style="object-position: 50% 18%;"
+            />
+          </div>
+
+          <div class="mt-5 grid gap-3">
+            <div class="rounded-2xl bg-white p-5 border border-black/5">
+              <p class="text-sm font-semibold">Foco</p>
+              <p class="text-sm text-black/60 mt-1">TDAH • Transtorno Bipolar • Ansiedade</p>
+            </div>
+            <div class="rounded-2xl bg-[#F6F0FF] p-5 border border-black/5">
+              <p class="text-sm font-semibold">Atendimento online</p>
+              <p class="text-sm text-black/60 mt-1">Flexibilidade e continuidade no cuidado.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="atuacao" class="bg-white/60 border-y border-black/5">
+    <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <div class="text-center">
+        <p class="inline-flex rounded-full bg-[#F6F0FF] px-4 py-2 text-sm font-medium text-black/70 border border-black/5">Como te ajudo?</p>
+        <h2 class="mt-5 font-serif text-4xl md:text-5xl">Áreas de atuação</h2>
+        <p class="mt-4 text-black/60 max-w-2xl mx-auto">
+          Intervenções baseadas em evidências para promover clareza, autonomia e estabilidade emocional.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-3xl border border-black/5 bg-white p-6 shadow-sm hover:shadow-md transition">
+          <div class="h-12 w-12 rounded-2xl bg-[#F6F0FF] flex items-center justify-center text-xl">🧘‍♀️</div>
+          <h3 class="mt-4 font-semibold text-lg">Ansiedade</h3>
+          <p class="mt-2 text-sm text-black/60">
+            Manejo de sintomas, pensamentos acelerados, preocupação e estratégias de regulação emocional.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-black/5 bg-white p-6 shadow-sm hover:shadow-md transition">
+          <div class="h-12 w-12 rounded-2xl bg-[#F6F0FF] flex items-center justify-center text-xl">🎯</div>
+          <h3 class="mt-4 font-semibold text-lg">TDAH</h3>
+          <p class="mt-2 text-sm text-black/60">
+            Organização, foco, planejamento, rotina e constância com ferramentas práticas.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-black/5 bg-white p-6 shadow-sm hover:shadow-md transition">
+          <div class="h-12 w-12 rounded-2xl bg-[#F6F0FF] flex items-center justify-center text-xl">💚</div>
+          <h3 class="mt-4 font-semibold text-lg">Depressão</h3>
+          <p class="mt-2 text-sm text-black/60">
+            Reestruturação cognitiva, retomada de energia, hábitos sustentáveis e sentido de vida.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-black/5 bg-white p-6 shadow-sm hover:shadow-md transition">
+          <div class="h-12 w-12 rounded-2xl bg-[#F6F0FF] flex items-center justify-center text-xl">🌙</div>
+          <h3 class="mt-4 font-semibold text-lg">Transtorno Bipolar</h3>
+          <p class="mt-2 text-sm text-black/60">
+            Psicoeducação, plano de prevenção de recaídas e estabilização emocional.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-3xl border border-black/5 bg-white p-8 shadow-sm">
+          <h3 class="font-semibold text-xl">Especializações</h3>
+          <ul class="mt-4 space-y-2 text-black/70">
+            <li>• Terapia Cognitivo-Comportamental (TCC)</li>
+            <li>• Psicopatologia</li>
+            <li>• Psicologia da Saúde</li>
+            <li>• Obesidade e Emagrecimento</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl border border-black/5 bg-white p-8 shadow-sm">
+          <h3 class="font-semibold text-xl">Como funciona</h3>
+          <ul class="mt-4 space-y-2 text-black/70">
+            <li>• Entrevista inicial e compreensão do seu contexto</li>
+            <li>• Definição de objetivos e plano terapêutico</li>
+            <li>• Estratégias práticas + acompanhamento de evolução</li>
+            <li>• Ajustes contínuos para resultados consistentes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section id="beneficios" class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+    <div class="text-center">
+      <p class="inline-flex rounded-full bg-white/70 px-4 py-2 text-sm font-medium text-black/70 border border-black/5">Terapia Online</p>
+      <h2 class="mt-5 font-serif text-4xl md:text-5xl">Benefícios do atendimento online</h2>
+      <p class="mt-4 text-black/60 max-w-2xl mx-auto">
+        Flexibilidade, conforto e continuidade — com sigilo e qualidade no cuidado.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <div class="rounded-3xl bg-white border border-black/5 p-7 shadow-sm">
+        <div class="h-12 w-12 rounded-2xl bg-[#F6F0FF] flex items-center justify-center text-xl">🏠</div>
+        <h3 class="mt-4 font-semibold">Conforto e privacidade</h3>
+        <p class="mt-2 text-sm text-black/60">Sessões em um ambiente seguro e familiar.</p>
+      </div>
+
+      <div class="rounded-3xl bg-white border border-black/5 p-7 shadow-sm">
+        <div class="h-12 w-12 rounded-2xl bg-[#F6F0FF] flex items-center justify-center text-xl">🧩</div>
+        <h3 class="mt-4 font-semibold">Continuidade terapêutica</h3>
+        <p class="mt-2 text-sm text-black/60">Menos barreiras para manter consistência nas sessões.</p>
+      </div>
+
+      <div class="rounded-3xl bg-white border border-black/5 p-7 shadow-sm">
+        <div class="h-12 w-12 rounded-2xl bg-[#F6F0FF] flex items-center justify-center text-xl">📱</div>
+        <h3 class="mt-4 font-semibold">Acesso flexível</h3>
+        <p class="mt-2 text-sm text-black/60">Atendimento de qualquer lugar, dentro da sua rotina.</p>
+      </div>
+    </div>
+
+    <div class="mt-10 rounded-3xl border border-black/5 bg-white p-6 flex items-center gap-4 shadow-sm">
+      <div class="h-12 w-12 rounded-2xl bg-[var(--accent)] text-white flex items-center justify-center">💬</div>
+      <p class="text-black/70">
+        <b>Atendimento 100% online</b> via WhatsApp / Google Meet / plataforma de sua preferência.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="bg-white/60 border-t border-black/5">
+    <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <div class="text-center">
+        <p class="inline-flex rounded-full bg-[#F6F0FF] px-4 py-2 text-sm font-medium text-black/70 border border-black/5">Dúvidas</p>
+        <h2 class="mt-5 font-serif text-4xl md:text-5xl">FAQ</h2>
+      </div>
+
+      <div class="mt-12 grid gap-4 max-w-3xl mx-auto">
+        <details class="group rounded-2xl bg-white border border-black/5 p-6 shadow-sm">
+          <summary class="cursor-pointer font-semibold flex justify-between items-center">
+            Como funciona o atendimento online?
+            <span class="text-black/40 group-open:rotate-180 transition">⌄</span>
+          </summary>
+          <p class="mt-3 text-black/60">
+            As sessões acontecem por chamada de vídeo com sigilo e qualidade. Você recebe orientações e um plano terapêutico.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl bg-white border border-black/5 p-6 shadow-sm">
+          <summary class="cursor-pointer font-semibold flex justify-between items-center">
+            Quais temas você atende?
+            <span class="text-black/40 group-open:rotate-180 transition">⌄</span>
+          </summary>
+          <p class="mt-3 text-black/60">
+            Ansiedade, TDAH, transtornos depressivos, transtorno bipolar e questões relacionadas a obesidade/emagrecimento.
+          </p>
+        </details>
+
+        <details class="group rounded-2xl bg-white border border-black/5 p-6 shadow-sm">
+          <summary class="cursor-pointer font-semibold flex justify-between items-center">
+            Como agendar uma sessão?
+            <span class="text-black/40 group-open:rotate-180 transition">⌄</span>
+          </summary>
+          <p class="mt-3 text-black/60">
+            Clique no botão “Agendar Sessão” e você será direcionado ao WhatsApp com a mensagem pronta.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+    <div class="rounded-[28px] bg-white/70 border border-black/5 p-10 md:p-14 shadow-sm">
+      <div class="text-center">
+        <h2 class="font-serif text-4xl md:text-5xl">Agende sua sessão</h2>
+        <p class="mt-4 text-black/60 max-w-2xl mx-auto">
+          Entre em contato para mais informações ou para agendar. Atendimento com discrição e compromisso.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="https://wa.me/5517997785063?text=Ol%C3%A1%20Maiza%20Dias%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Podemos%20conversar%3F"
+            class="rounded-full bg-[var(--accent)] px-7 py-3 font-semibold text-white hover:brightness-95 transition"
+            target="_blank" rel="noopener"
+          >
+            WhatsApp
+          </a>
+
+          <a
+            href="https://www.instagram.com/maizadiaspsi/"
+            class="rounded-full border border-black/10 bg-white px-7 py-3 font-semibold text-black/70 hover:bg-white/80 transition"
+            target="_blank" rel="noopener"
+          >
+            Instagram
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-[#ECE6DF] border-t border-black/5 py-10">
-    <div class="mx-auto max-w-6xl px-4 text-center text-sm text-black/60">
-      © <span id="year"></span> Maíza Dias. Todos os direitos reservados.
-    </div>
-  </footer>
+  <footer class="bg-[#ECE6DF] border-t border-black/5">
+    <div class="mx-auto max-w-7xl px-6 py-14">
+      <div class="grid gap-10 md:grid-cols-4">
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+        <div>
+          <p class="font-semibold">MAÍZA DIAS</p>
+          <p class="text-xs text-black/60 mt-1">PSICÓLOGA CLÍNICA</p>
+          <p class="mt-4 text-sm text-black/60">
+            Um espaço seguro para você expressar pensamentos e emoções, trabalhando em direção a equilíbrio e estabilidade.
+          </p>
+
+          <div class="mt-5 flex items-center gap-3">
+            <a class="h-10 w-10 rounded-full bg-white/70 border border-black/5 flex items-center justify-center hover:bg-white"
+               href="https://www.instagram.com/maizadiaspsi/" target="_blank" rel="noopener" aria-label="Instagram">
+              ⌁
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="font-semibold">Navegação</p>
+          <ul class="mt-4 space-y-2 text-sm text-black/60">
+            <li><a class="hover:text-black" href="#inicio">Início</a></li>
+            <li><a class="hover:text-black" href="#sobre">Sobre</a></li>
+            <li><a class="hover:text-black" href="#atuacao">Serviços</a></li>
+            <li><a class="hover:text-black" href="#beneficios">Benefícios</a></li>
+            <li><a class="hover:text-black" href="#faq">FAQ</a></li>
+            <li><a class="hover:text-black" href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-semibold">Contato</p>
+          <div class="mt-4 space-y-3 text-sm text-black/60">
+            <p>
+              <span class="font-medium text-black/70">WhatsApp:</span><br>
+              <a class="hover:text-black" target="_blank" rel="noopener"
+                 href="https://wa.me/5517997785063?text=Ol%C3%A1%20Maiza%20Dias%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Podemos%20conversar%3F">
+                +55 17 99778-5063
+              </a>
+            </p>
+
+            <p>
+              <span class="font-medium text-black/70">Instagram:</span><br>
+              <a class="hover:text-black" href="https://www.instagram.com/maizadiaspsi/" target="_blank" rel="noopener">
+                @maizadiaspsi
+              </a>
+            </p>
+
+            <p class="text-black/55">Atendimento online</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="font-semibold">Horários</p>
+          <div class="mt-4 text-sm text-black/60 space-y-2">
+            <div class="flex items-center justify-between">
+              <span>Segunda – Sexta</span>
+              <span class="text-black/70 font-medium">A combinar</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>Sábado</span>
+              <span class="text-black/70 font-medium">A combinar</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>Domingo</span>
+              <span class="text-black/70 font-medium">Fechado</span>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl bg-white/70 border border-black/5 p-4">
+            <p class="text-xs text-black/60">Registro Profissional</p>
+            <p class="mt-1 font-semibold">CRP 06/134986</p>
+          </div>
+        </div>
+
+      </div>
+
+  <div class="mt-10 border-t border-black/5 pt-6 text-sm text-black/50 flex flex-col md:flex-row items-center justify-center gap-2">
+  <p class="text-center">
+    © <span id="year"></span> Maíza Dias. Todos os direitos reservados
+    <span class="mx-2 opacity-50">|</span>
+    Desenvolvido por Wendy Bezerra
+  </p>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+
+  <!-- BOTÃO FIXO WHATSAPP -->
+  <a
+    href="https://wa.me/5517997785063?text=Ol%C3%A1%20Maiza%20Dias%2C%20gostaria%20de%20agendar%20uma%20sess%C3%A3o.%20Podemos%20conversar%3F"
+    target="_blank" rel="noopener"
+    class="fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-white font-semibold shadow-lg hover:brightness-95 transition"
+    aria-label="Falar no WhatsApp"
+  >
+    <span class="text-xl">💬</span>
+    <span class="hidden sm:inline">WhatsApp</span>
+  </a>
 
 </body>
 </html>
